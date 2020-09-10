@@ -89,8 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
+# else #   export EDITOR='mvim'
 # fi
 
 # Compilation flags
@@ -120,3 +119,6 @@ export NVM_DIR="$HOME/.nvm"
 eval $(thefuck --alias)
 
 alias config='/usr/bin/git --git-dir=/Users/luca/.cfg/ --work-tree=/Users/luca'
+alias mixdg='mix deps.get'
+alias mixdc='mix deps.clean'
+alias iexm='iex -S mix'
