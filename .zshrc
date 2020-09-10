@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt fasd)
+plugins=(git git-prompt fasd mix)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,3 +122,4 @@ alias config='/usr/bin/git --git-dir=/Users/luca/.cfg/ --work-tree=/Users/luca'
 alias mixdg='mix deps.get'
 alias mixdc='mix deps.clean'
 alias iexm='iex -S mix'
+
