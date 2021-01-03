@@ -90,7 +90,7 @@
             },
             {
                 "type": "staticButton",
-                "title": "BCH",
+                "title": "LTC",
                 "bordered": false,
                 "align": "left"
             },
@@ -99,34 +99,37 @@
                 "refreshInterval": 600, // in seconds
                 "align": "left",
                 "width": 120,
-                "from": "BCH",
-                "to": "USD",
-                "full": true // BTC‣1337.1337$
-            },
-            {
-                "type": "currency",
-                "refreshInterval": 600, // in seconds
-                "align": "right",
-                "width": 100,
-                "from": "XLM",
-                "to": "USD",
-                "full": true // BTC‣1337.1337$
-            },
-            {
-                "type": "currency",
-                "refreshInterval": 600, // in seconds
-                "align": "right",
-                "width": 100,
                 "from": "LTC",
                 "to": "USD",
                 "full": true // BTC‣1337.1337$
             },
             {
+                "type": "staticButton",
+                "title": "XLM",
+                "bordered": false,
+                "align": "left"
+            },
+            {
                 "type": "currency",
                 "refreshInterval": 600, // in seconds
-                "align": "right",
-                "width": 100,
-                "from": "EOS",
+                "align": "left",
+                "width": 120,
+                "from": "XLM",
+                "to": "USD",
+                "full": true // BTC‣1337.1337$
+            },
+            {
+                "type": "staticButton",
+                "title": "XRP",
+                "bordered": false,
+                "align": "left"
+            },
+            {
+                "type": "currency",
+                "refreshInterval": 600, // in seconds
+                "align": "left",
+                "width": 120,
+                "from": "XRP",
                 "to": "USD",
                 "full": true // BTC‣1337.1337$
             }
