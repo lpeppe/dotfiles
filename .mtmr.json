@@ -14,7 +14,7 @@
         "bordered": false,
         "width": 60,
         "align": "left",
-        "title": "$$$", //𝘤𝘳𝘺𝘱𝘵𝘰
+        "title": "₿", //𝘤𝘳𝘺𝘱𝘵𝘰
         "items": [
             {
                 "type": "close",
