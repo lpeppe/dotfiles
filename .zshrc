@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd fzf)
+plugins=(git fasd direnv fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +107,29 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 # Enable Iex history
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# neato aliases
+neato-ssh-connect() {
+  declare -A environment_ips
+
+  environment_ips=( 
+	["pg1"]=$NEATO_PG1_IP
+	["pg2"]=$NEATO_PG2_IP
+	["qa"]=$NEATO_QA_IP
+	["staging"]=$NEATO_STAGING_IP
+	["prod"]=$NEATO_PROD_IP
+	["mapproc_pg"]=$NEATO_MAPPROC_PG_IP
+	["mapproc_qa"]=$NEATO_MAPPROC_QA_IP
+  )
+  
+  eval "ssh -i ~/.ssh/amazon-neato-us.pem ec2-user@${environment_ips[$1]}"
+}
+
+robot-logs() {
+    docker run -v "$(pwd):/tmp/journal" --rm centos/systemd journalctl --directory="/tmp/journal" --no-pager
+}
